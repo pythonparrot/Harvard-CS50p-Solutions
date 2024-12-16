@@ -1,8 +1,10 @@
 total = 0
 
-while total < 50:
+while True:
     total += int(input("Insert coin: "))
-    print("Amount due: " + (50 - total))
-
-print(Change owed: + ((50 - total) * (-1)))
+    if total < 50:
+        print("Amount due: " + (50 - total))
+    else:
+        print("Change Owed: " + abs(50 - total))
+        break
 
