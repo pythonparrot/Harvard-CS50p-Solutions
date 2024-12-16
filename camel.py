@@ -1,4 +1,3 @@
-#Split the variable name based on upper cases
 str = input("Variable name: ")
 words = []
 start = 0
@@ -12,13 +11,13 @@ for i in range(len(str)):
 
 finalStr = ""
 
-for word in words:
-    finalStr.append()
+for i in range(len(words)):
+    if i == len(words) - 1:
+        finalStr += words[i].lower()
+    else:
+        finalStr += words[i].lower() + "_"
 
-print(words)
-
-#Add the word together and put an underscore between each word
-#Set everything to lower case
+print(finalStr)
 
 
 
