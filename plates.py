@@ -10,21 +10,23 @@ def is_valid(s):
     if len(s) >= 2 and len(s) <= 6:
         if s[0 : 2].isalpha():
             if s.isalnum():
-                index = 0
-                for i in range(len(s)):
-                    if s[i].isdigit():
-                        if int(s[i]) == 0:
-                            return False
-                        index = i
-                        break
-                for i in range(index + 1, len(s)):
-                    bool = True
-                    if s[i].isalpha():
-                        bool = False
-                        break
-                if bool == True:
-                    return True
-
+                if s.isalpha() != True:
+                    index = 0
+                    for i in range(len(s)):
+                        if s[i].isdigit():
+                            if int(s[i]) == 0:
+                                return False
+                            index = i
+                            break
+                    for i in range(index + 1, len(s)):
+                        bool = True
+                        if s[i].isalpha():
+                            bool = False
+                            break
+                    if bool == True:
+                        return True
+            else:
+                return True
     return False
 
 main()
