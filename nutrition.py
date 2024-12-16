@@ -1,5 +1,5 @@
 fruit = input("Item: ").lower()
-list = [
+fruits = [
     {"name": "apple", "calories": 130},
     {"name": "avocado", "calories": 50},
     {"name": "banana", "calories": 110},
@@ -22,6 +22,6 @@ list = [
     {"name": "watermelon", "calories": 80}
 ]
 
-for i in list:
+for i in fruits:
     if i["name"] == fruit:
         print(str(i["calories"]))
