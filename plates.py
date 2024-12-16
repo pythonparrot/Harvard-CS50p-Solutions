@@ -15,7 +15,9 @@ def is_valid(s):
                     if s[i].isdigit():
                         index = i
                         break
-                for i in range
+                for i in range(index + 1, len(s)):
+                    if s[i].isalpha():
+                        
 
 
     print("Invalid")
