@@ -1,5 +1,7 @@
 def main():
-    ...
+    time = input("What time is it? ")
+    time = convert(time)
+    if (time >= 7 and time <= 8)
 
 
 def convert(time):
