@@ -1,3 +1,3 @@
 str = input("Input: ")
-for i in range(len(str)):
-    
+while str.find("a") != -1 or str.find("i")
+
