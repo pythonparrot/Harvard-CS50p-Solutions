@@ -1,3 +1,1 @@
-list = input("Expression: ").split()
-x = float(list[1])
-y = 
+x, y, z = input("Expression: ").split()
