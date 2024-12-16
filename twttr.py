@@ -6,8 +6,9 @@ def has(string, letter):
     else:
         return false
 
-while str.lower().find("a") >= 0 or str.lower().find("e") >= 0 or str.lower().find("i") >= 0 or str.lower().find("o") >= 0 or str.lower().find("u") >= 0:
-    if
+while has(str, "a") or has(str, "e") or has(str, "i") or has(str, "o") or has(str, "u"):
+    if has(str, "a"):
+        str = str.remove
 
 print(str)
 
