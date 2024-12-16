@@ -11,8 +11,9 @@ for i in range list_indexes:
     if i == (len(list_indexes) - 1):
         list_words.append(str[list_indexes[i])
     else:
-        list_words.append()
+        list_words.append(str[list_indexes[i - 1] : list_indexes[i]])
 
+print(list_words)
 
 #Add the word together and put an underscore between each word
 #Set everything to lower case
