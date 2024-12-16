@@ -22,6 +22,5 @@ fruits = [
     {"name": "watermelon", "calories": 80}
 ]
 
-for i in fruits:
-    if fruit in fruits[i]:
-        print(str(i["calories"]))
+    if fruit in fruits:
+        print("Trueski")
