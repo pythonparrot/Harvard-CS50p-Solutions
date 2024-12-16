@@ -13,6 +13,8 @@ def is_valid(s):
                 index = 0
                 for i in range(len(s)):
                     if s[i].isdigit():
+                        if int(s[i]) == 0:
+                            return False
                         index = i
                         break
                 for i in range(index + 1, len(s)):
