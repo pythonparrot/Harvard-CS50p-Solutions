@@ -25,8 +25,8 @@ def is_valid(s):
                             break
                     if bool == True:
                         return True
-            else:
-                return True
+                else:
+                    return True
     return False
 
 main()
