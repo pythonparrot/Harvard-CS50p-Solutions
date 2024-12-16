@@ -7,7 +7,7 @@ for i in range(len(str)):
         words.append(str[start : i])
         start = i
     if i == len(str) - 1:
-        words.append(str[start : len(str)])
+        words.append(str[start : ])
 
 finalStr = ""
 
