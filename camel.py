@@ -4,7 +4,11 @@ list_indexes = []
 for i in range(len(str)):
     if str[i].isupper():
         list_indexes.append(i)
+
+print(list_indexes)
+
 list_words = []
+
 for i in range(len(list_indexes)):
     if i == 0:
         list_words.append(str[0 : list_indexes[i]])
