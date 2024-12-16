@@ -1,10 +1,8 @@
-str = input("Input: ")
-
 def has(string, letter):
     if string.lower().find(letter.lower()) >= 0:
-        return true
+        return True
     else:
-        return false
+        return False
 
 def removeVowel(string, letter):
     while string.find(letter.upper()) >= 0:
@@ -15,9 +13,19 @@ def removeVowel(string, letter):
 
 
 def main():
-    if has(str, "a"):
-        removeVowel(str, "a")
-    if has(str, "e"):
-        removeVowel(str, "e")
-    if has (str, "i")
+    str = input("Input: ")
 
+    if has(str, "a"):
+        str = removeVowel(str, "a")
+    if has(str, "e"):
+        str = removeVowel(str, "e")
+    if has (str, "i"):
+        str = removeVowel(str, "i")
+    if has (str, "o"):
+        str = removeVowel(str, "o")
+    if has (str, "u"):
+        str = removeVowel(str, "u")
+
+    print(str)
+
+main()
