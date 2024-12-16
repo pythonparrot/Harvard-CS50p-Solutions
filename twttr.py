@@ -6,9 +6,9 @@ def has(string, letter):
 
 def removeVowel(string, letter):
     while string.find(letter.upper()) >= 0:
-        string = string.remove(letter.upper())
+        string = string.replace(letter.upper(), "")
     while string.find(letter.lower()) >= 0:
-        string = string.remove(letter.lower())
+        string = string.replace(letter.lower(), "")
     return string
 
 
