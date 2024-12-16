@@ -1,6 +1,8 @@
 x, y, z = input("Expression: ").split()
-x = float(x, 1)
-z = float(z, 1)
+x = float(x)
+z = float(z)
+x = round(x, 1)
+z = round(z, 1)
 match(y):
     case "+":
         print(x + z)
