@@ -9,7 +9,9 @@ for i in range list_indexes:
     if i == 0:
         list_words.append(str[0 : list_indexes[i]])
     if i == (len(list_indexes) - 1):
-        list_words.append(str[list_indexes[i - 1] : list])
+        list_words.append(str[list_indexes[i])
+    else:
+        list_words.append()
 
 
 #Add the word together and put an underscore between each word
