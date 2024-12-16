@@ -15,6 +15,6 @@ def convert(time):
     y = float(y)/60
     return x + y
 
-main
+main()
 #if __name__ == "__main__":
 #    main()
