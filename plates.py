@@ -16,10 +16,13 @@ def is_valid(s):
                         index = i
                         break
                 for i in range(index + 1, len(s)):
+                    bool = True
                     if s[i].isalpha():
-                        
+                        bool = False
+                        break
+                if bool == True:
+                    return True
 
-
-    print("Invalid")
+    return False
 
 main()
