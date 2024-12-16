@@ -2,5 +2,7 @@
 #Add the word together and put an underscore between each word
 #Set everything to lower case
 str = input("Variable name: ")
-
+for _ in str:
+    if _.isUpper():
+        
 
