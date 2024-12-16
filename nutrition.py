@@ -23,5 +23,5 @@ fruits = [
 ]
 
 for i in fruits:
-    if i["name"] == fruit:
+    if fruit in fruits[i]:
         print(str(i["calories"]))
