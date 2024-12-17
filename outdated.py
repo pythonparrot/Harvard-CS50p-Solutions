@@ -1,16 +1,16 @@
 months = {
-    "January": 01,
-    "February": 02,
-    "March": 03,
-    "April": 04,
-    "May": 05,
-    "June": 06,
-    "July": 7,
-    "August": 8,
-    "September": 9,
-    "October": 10,
-    "November": 11,
-    "December": 12
+    "January": "01",
+    "February": "02",
+    "March": "03",
+    "April": "04",
+    "May": "05",
+    "June": "06",
+    "July": "07:,
+    "August": "08",
+    "September": "09",
+    "October": "10",
+    "November": "11",
+    "December": "12"
 }
 
 while True:
@@ -27,5 +27,8 @@ while True:
         elif date.find(" ") > 0 and date.count(" ") == 2:
             month, day, year = date.split()
             try:
-                month = str(months[month])
+                month = months[month]
+            except KeyError:
+                pass
+                
 
