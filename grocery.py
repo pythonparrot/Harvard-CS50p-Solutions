@@ -12,5 +12,5 @@ while True:
             groceries.update({item: 1})
 
 for item in sorted(groceries):
-    print(groceries[item] + " " + item)
+    print(str(groceries[item]) + " " + item)
 
