@@ -31,10 +31,11 @@ while True:
             except KeyError:
                 pass
             else:
-                day = day[0 : len(day) - 1]
-                if int(day) <= 31 and int(day) >= 1 and int(month) >= 1 and int(month) <= 12:
-                    print(f"{year}-{int(month):02}-{int(day):02}")
-                    break
+                if day.endswith(","):
+                    day = day[0 : len(day) - 1]
+                    if int(day) <= 31 and int(day) >= 1 and int(month) >= 1 and int(month) <= 12:
+                        print(f"{year}-{int(month):02}-{int(day):02}")
+                        break
 
 
 
