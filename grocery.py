@@ -16,5 +16,5 @@ while True:
 groceries = sorted(groceries)
 
 for item in groceries:
-    print({groceries[item]} + " " + {item})
+    print(groceries[item] + " " + item)
 
