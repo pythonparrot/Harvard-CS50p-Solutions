@@ -22,7 +22,7 @@ while True:
         if date.find("/") > 0 and date.count("/") == 2:
             month, day, year = date.split(sep = "/")
             if len(year) == 4 and (len(month) == 1 or len(month) == 2) and (len(day) == 1 or len(day) == 2):
-                if 
+                date = 
 
         elif date.find(" ") > 0 and date.count(" ") == 2:
             month, day, year = date.split()
