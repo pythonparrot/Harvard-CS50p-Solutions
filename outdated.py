@@ -4,4 +4,7 @@ while True:
     except EOFError:
         break
     else:
-        try 
+        if date.find("/") > 0:
+            x, y, z = date.split(sep = "/")
+        elif date.find(" ") > 0:
+            x, y, z = date.split()
