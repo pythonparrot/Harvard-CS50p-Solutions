@@ -4,4 +4,4 @@ while True:
     except EOFError:
         break
     else:
-        
+        try 
