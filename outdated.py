@@ -1,10 +1,10 @@
 months = {
-    "January": 1,
-    "February": 2,
-    "March": 3,
-    "April": 4,
-    "May": 5,
-    "June": 6,
+    "January": 01,
+    "February": 02,
+    "March": 03,
+    "April": 04,
+    "May": 05,
+    "June": 06,
     "July": 7,
     "August": 8,
     "September": 9,
@@ -22,9 +22,10 @@ while True:
         if date.find("/") > 0 and date.count("/") == 2:
             month, day, year = date.split(sep = "/")
             if len(year) == 4 and (len(month) == 1 or len(month) == 2) and (len(day) == 1 or len(day) == 2):
-                print(f"{year}-{month:02}-{day:02})
+                print(f"{year}-{str(int(month):02)}-{str(int(day):02)})
                 break
         elif date.find(" ") > 0 and date.count(" ") == 2:
             month, day, year = date.split()
-            
+            try:
+                month = str(months[month])
 
