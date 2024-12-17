@@ -15,7 +15,7 @@ months = {
 
 while True:
     try:
-        date = input("Date: ")
+        date = input("Date: ").strip()
     except EOFError:
         break
     else:
