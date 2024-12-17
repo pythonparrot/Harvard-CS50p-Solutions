@@ -1,10 +1,8 @@
-groceries = {
-
-}
+groceries = {}
 
 while True:
     try:
-        item = input("").upper()
+        item = input("Item: ").upper()
     except EOFError:
         break
     else:
@@ -13,8 +11,6 @@ while True:
         else:
             groceries.update({item: 1})
 
-groceries = sorted(groceries)
-
-for item in groceries:
+for item in sorted(groceries):
     print(groceries[item] + " " + item)
 
