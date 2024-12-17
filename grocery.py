@@ -2,7 +2,7 @@ groceries = {}
 
 while True:
     try:
-        item = input("Item: ").upper()
+        item = input("").upper()
     except EOFError:
         break
     else:
