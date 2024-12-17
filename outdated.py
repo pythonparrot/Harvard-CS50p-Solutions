@@ -33,6 +33,7 @@ while True:
             else:
                 day = day[0 : len(day) - 1]
                 print(f"{year}-{month}-{int(day):02}")
+                break
 
 
 
