@@ -31,7 +31,9 @@ while True:
             except KeyError:
                 pass
             else:
-                
+                day = day[0 : len(day) - 1]
+                print(f"{year}-{month}-{str(int(day):02)})
+
 
 
 
