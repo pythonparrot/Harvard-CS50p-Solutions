@@ -13,3 +13,8 @@ while True:
         else:
             groceries.update({item: 1})
 
+groceries = sorted(groceries)
+
+for item in groceries:
+    print({groceries[item]} + " " + {item})
+
