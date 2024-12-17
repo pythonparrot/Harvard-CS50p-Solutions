@@ -1,3 +1,7 @@
+months = [
+    {"January": }
+]
+
 while True:
     try:
         date = input("Date: ")
@@ -6,5 +10,7 @@ while True:
     else:
         if date.find("/") > 0 and date.count("/") == 2:
             x, y, z = date.split(sep = "/")
-        elif date.find(" ") > 0:
+
+        elif date.find(" ") > 0 and date.count(" ") == 2:
             x, y, z = date.split()
+
