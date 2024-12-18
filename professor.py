@@ -3,6 +3,7 @@ import random
 
 def main():
     level = get_level()
+    score = 0
     for i in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
@@ -17,6 +18,8 @@ def main():
                 count += 1
             else:
                 if answer == sum:
+                    score += 1
+                    
 
 
 
