@@ -2,7 +2,7 @@ import sys
 import requests
 
 try:
-    n = float(sys.argsv[1])
+    n = float(sys.argv[1])
 except IndexError:
     sys.exit("Missing command line argument")
 except ValueError:
