@@ -6,16 +6,18 @@ while True:
     except ValueError:
         pass
     else:
-        if n == 1:
-            x = random.randint(0, 9)
-            y = random.randint(0, 9)
-        if n == 2:
-            x = random.randint(10, 99)
-            y = random.randint(10, 99)
-        if n == 3:
-            x = random.randint(100, 999)
-            y = random.randint(100, 999)
-        
+        for i in range(10):
+            if n == 1:
+                x = random.randint(0, 9)
+                y = random.randint(0, 9)
+                
+            if n == 2:
+                x = random.randint(10, 99)
+                y = random.randint(10, 99)
+            if n == 3:
+                x = random.randint(100, 999)
+                y = random.randint(100, 999)
+
 
 
 
