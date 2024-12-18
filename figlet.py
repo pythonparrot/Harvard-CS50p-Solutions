@@ -16,5 +16,7 @@ elif len(sys.argv) == 3:
     else:
         figlet.setFont(font = argv[2])
         print(figlet.renderText(str))
+else:
+    sys.exit()
 
 
