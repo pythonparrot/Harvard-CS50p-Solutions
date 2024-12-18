@@ -1,4 +1,5 @@
 import sys
+import inflect
 
 names = []
 
@@ -8,5 +9,5 @@ while True:
     except EOFError:
         sys.exit()
     else:
-        
+        print(f"Adieu, adieu, to {inflect.join(names)}")
 
