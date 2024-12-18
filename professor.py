@@ -3,8 +3,11 @@ import random
 
 def main():
     level = get_level()
-    integer = generate_integer(level)
-    print(str(integer))
+    for i in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        sum = x + y
+        
 
 
 def get_level():
