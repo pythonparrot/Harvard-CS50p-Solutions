@@ -32,7 +32,6 @@ def get_level():
     while True:
         try:
             n = int(input("Level: "))
-            break
         except ValueError:
             pass
         else:
