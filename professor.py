@@ -3,7 +3,8 @@ import random
 
 def main():
     level = get_level()
-    print(str(level))
+    integer = generate_integer(level)
+    print(str(integer))
 
 
 def get_level():
@@ -17,25 +18,21 @@ def get_level():
 
 
 def generate_integer(level):
-    ...
+    if level == 1:
+        return random.randint(0, 9)
+    elif level == 2:
+        return random.randint(10, 99)
+    elif level == 3:
+        return random.randint(100, 999)
+    else:
+        raise ValueError
 
 
 if __name__ == "__main__":
     main()
 
 
-    # else:
-    #     for i in range(10):
-    #         if n == 1:
-    #             x = random.randint(0, 9)
-    #             y = random.randint(0, 9)
 
-    #         if n == 2:
-    #             x = random.randint(10, 99)
-    #             y = random.randint(10, 99)
-    #         if n == 3:
-    #             x = random.randint(100, 999)
-    #             y = random.randint(100, 999)
 
 
 
