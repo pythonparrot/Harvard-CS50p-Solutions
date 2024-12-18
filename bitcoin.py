@@ -8,4 +8,6 @@ except IndexError:
 except ValueError:
     sys.exit("Command-line argument is not a number")
 
+print(str(n))
+
 
