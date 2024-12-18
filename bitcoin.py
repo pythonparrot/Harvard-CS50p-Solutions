@@ -14,6 +14,6 @@ try:
 except requests.RequestsException:
     sys.exit("Requests Error")
 else:
-    print(f"${price * n})
+    print(f"${(price * n):,.4f})
 
 
