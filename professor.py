@@ -4,6 +4,7 @@ while True:
     except ValueError:
         pass
     else:
-        if n == 1 or n == 2 or n == 3:
+        if n == 1:
             
+
 
