@@ -24,7 +24,9 @@ def main():
                 else:
                     print("EEE")
                     count += 1
-
+        if count == 3:
+            print(f"Correct solution: {sum})
+            
     print(f"Score: {score}")
 
 
