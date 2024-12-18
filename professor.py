@@ -28,9 +28,6 @@ def main():
     print(f"Score: {score}")
 
 
-
-
-
 def get_level():
     while True:
         try:
