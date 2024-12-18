@@ -1,3 +1,6 @@
 while True:
     level = input("Level: )
-    if level
+    if isinstance(level, int) and level > 0:
+        break
+
+
