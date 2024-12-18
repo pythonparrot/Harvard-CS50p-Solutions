@@ -10,8 +10,10 @@ except ValueError:
 
 try:
     r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json").json()
+    price = r["bpi"]["USD"]["rate_float"]
 except requests.RequestsException:
     sys.exit("Requests Error")
 else:
-    price = float(r["bpi"]["USD"]["rate"].replace(",", ""))
+    print(f"${price * n})
+
 
