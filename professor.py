@@ -4,6 +4,7 @@ import random
 def main():
     level = get_level()
     score = 0
+
     for i in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
@@ -19,7 +20,14 @@ def main():
             else:
                 if answer == sum:
                     score += 1
-                    
+                    break
+                else:
+                    print("EEE")
+                    count += 1
+
+    print(f"Score: {score}")
+
+
 
 
 
