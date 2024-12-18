@@ -7,7 +7,17 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         sum = x + y
-        
+        count = 0
+        problem = f"{x} + {y} = "
+        while count < 3:
+            try:
+                answer = int(input(problem))
+            except ValueError:
+                print("EEE")
+                count += 1
+            else:
+                if answer == sum:
+
 
 
 def get_level():
