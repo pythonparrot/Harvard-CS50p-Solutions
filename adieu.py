@@ -9,5 +9,6 @@ while True:
     try:
         names.append(input("Name: "))
     except EOFError:
-        sys.exit(f"Adieu, adieu, to {p.join(names)}")
+        print(f"Adieu, adieu, to {p.join(names)}")
+        sys.exit()
 
