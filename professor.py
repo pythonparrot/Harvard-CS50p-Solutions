@@ -35,7 +35,9 @@ def get_level():
             break
         except ValueError:
             pass
-    return n
+        else:
+            if n > 0 and n <= 3:
+                return n
 
 
 def generate_integer(level):
