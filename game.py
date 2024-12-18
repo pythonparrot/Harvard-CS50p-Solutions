@@ -3,19 +3,22 @@ import random
 while True:
     level = input("Level: ")
     try:
-        if isinstance(int(level), int) and level > 0:
+        if isinstance(int(level), int) and int(level) > 0:
             break
-    except:
-        
+    except ValueError:
+        pass
 
-num = random.randint(1, level)
+num = random.randint(1, int(level))
 
 while True:
-    guess = input("Guess: ")
-    if guess < num:
-        print("Too small!")
-    if guess > num:
-        print("Too large!")
-    if guess == num:
-        print("Just right!")
-        break
+    try:
+        guess = int(input("Guess: "))
+        if guess < num:
+            print("Too small!")
+        if guess > num:
+            print("Too large!")
+        if guess == num:
+            print("Just right!")
+            break
+    except ValueError:
+        pass
