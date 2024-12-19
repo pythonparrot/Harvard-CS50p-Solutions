@@ -14,19 +14,13 @@ def convert(fraction):
     else:
         if x.is_integer() and y.is_integer() and x <= y:
             try:
-                num = x/y
+                num = (x/y)*100
             except ZeroDivisionError:
                 pass
             else:
-                if num <= 0.01:
-                    print("E")
-                elif num >= 0.99:
-                    print("F")
-                else:
-                    return str(round(num * 100)) + "%"
-                break
+                gauge(num)
 
-def guage(percentage):
+def gauge(percentage):
     if percentage <= 1:
         return "E"
     elif percentage >= 99:
