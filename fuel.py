@@ -1,27 +1,27 @@
 import sys
 
 def main():
-    while True:
-        frac = input("Fraction: ")
+    frac = input("Fraction: ")
+    print(convert(frac))
 
 
 
 def convert(fraction):
-    try:
-        x, y = fraction.split(sep = "/")
-        x = float(x)
-        y = float(y)
-    except ValueError:
-        pass
-    else:
-        if x.is_integer() and y.is_integer() and x <= y:
-            try:
-                num = (x/y)*100
-            except ZeroDivisionError:
-                pass
-            else:
-                return gauge(num)
-                sys.exit()
+    while True:
+        try:
+            x, y = fraction.split(sep = "/")
+            x = float(x)
+            y = float(y)
+        except ValueError:
+            pass
+        else:
+            if x.is_integer() and y.is_integer() and x <= y:
+                try:
+                    num = (x/y)*100
+                except ZeroDivisionError:
+                    pass
+                else:
+                    return gauge(num)
 
 def gauge(percentage):
     if percentage <= 1:
