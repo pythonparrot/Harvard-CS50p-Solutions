@@ -1,8 +1,12 @@
 def main():
     while True:
-    frac = input("Fraction: ")
+        frac = input("Fraction: ")
+        convert(frac)
+        
+
+def convert(fraction):
     try:
-        x, y = frac.split(sep = "/")
+        x, y = fraction.split(sep = "/")
         x = float(x)
         y = float(y)
     except ValueError:
@@ -21,8 +25,6 @@ def main():
                 else:
                     print(str(round(num * 100)) + "%")
                 break
-
-def convert(fraction):
 
 def guage(percentage):
 
