@@ -9,19 +9,21 @@ def removeVowel(string, letter):
     return string
 
 def main():
-    str = input("Input: ")
+    string1 = input("Input: ")
+    print(shorten(string1))
 
-    if has(str, "a"):
-        str = removeVowel(str, "a")
-    if has(str, "e"):
-        str = removeVowel(str, "e")
-    if has (str, "i"):
-        str = removeVowel(str, "i")
-    if has (str, "o"):
-        str = removeVowel(str, "o")
-    if has (str, "u"):
-        str = removeVowel(str, "u")
+def shorten(word):
+    if has(word, "a"):
+        word = removeVowel(str, "a")
+    if has(word, "e"):
+        word = removeVowel(str, "e")
+    if has (word, "i"):
+        word = removeVowel(str, "i")
+    if has (word, "o"):
+        word = removeVowel(str, "o")
+    if has (word, "u"):
+        word = removeVowel(str, "u")
+    return word
 
-    print(str)
-
-main()
+if __name__ == "__main__":
+    main()
