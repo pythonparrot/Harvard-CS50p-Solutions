@@ -8,21 +8,17 @@ def main():
 
 def convert(fraction):
     while True:
-        try:
-            x, y = fraction.split(sep = "/")
-            x = float(x)
-            y = float(y)
-        except ValueError:
-            pass
-        else:
-            if x.is_integer() and y.is_integer() and x <= y:
-                if y != 0:
-                    num = (x/y)*100
-                    return gauge(num)
-                else:
-                    raise ZeroDivisionError
+        x, y = fraction.split(sep = "/")
+        x = float(x)
+        y = float(y)
+        if x <= y:
+            if y != 0:
+                num = (x/y)*100
+                return gauge(num)
             else:
-                raise ValueError
+                raise ZeroDivisionError
+        else:
+            raise ValueError
 
 def gauge(percentage):
     if percentage <= 1:
