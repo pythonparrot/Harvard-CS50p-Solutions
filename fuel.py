@@ -1,7 +1,7 @@
 def main():
     while True:
         frac = input("Fraction: ")
-        convert(frac)
+        if convert(frac) == 
 
 
 def convert(fraction):
@@ -18,7 +18,7 @@ def convert(fraction):
             except ZeroDivisionError:
                 pass
             else:
-                gauge(num)
+                return gauge(num)
 
 def gauge(percentage):
     if percentage <= 1:
