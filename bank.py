@@ -1,8 +1,9 @@
 def main():
-    g = input("Greeting: ").lower().strip()
+    g = input("Greeting: ")
     print(value(g))
 
 def value(greeting):
+    greeting = greeting.lower().strip()
     if greeting.find("hello") == 0:
         return "$0"
     elif greeting.find("h") == 0:
