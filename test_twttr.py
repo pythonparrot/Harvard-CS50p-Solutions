@@ -8,3 +8,6 @@ def test_twttr2():
 
 def test_twttr3():
     assert shorten("CS50") == "CS50"
+
+def test_twttr4():
+    assert shorten("pleAse") == "pls"
