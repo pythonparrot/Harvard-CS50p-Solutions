@@ -17,3 +17,6 @@ def test_5():
 
 def test_6():
     assert is_valid("OUTATIME") == False
+
+def test_7():
+    assert is_valid("0UTATIME") == False
