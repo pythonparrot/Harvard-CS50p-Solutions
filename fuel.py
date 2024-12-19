@@ -1,4 +1,5 @@
-while True:
+def main():
+    while True:
     frac = input("Fraction: ")
     try:
         x, y = frac.split(sep = "/")
@@ -20,4 +21,11 @@ while True:
                 else:
                     print(str(round(num * 100)) + "%")
                 break
+
+def convert(fraction):
+
+def guage(percentage):
+
+if __name__ == "__main__":
+    main()
 
