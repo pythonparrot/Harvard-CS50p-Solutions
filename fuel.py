@@ -16,7 +16,7 @@ def convert(fraction):
             pass
         else:
             if x.is_integer() and y.is_integer() and x <= y:
-                if y != 0
+                if y != 0:
                     num = (x/y)*100
                     return gauge(num)
                 else:

@@ -1,4 +1,9 @@
-import fuel
+from fuel import convert
+from fuel import gauge
+import pytest
 
 def test_convert():
-    assert convert("1/2") == "50.0%"
+    assert convert("1/2") == "50%"
+
+    with pytest.raises(ValueError):
+        convert("cat/2")
