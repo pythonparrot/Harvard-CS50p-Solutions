@@ -1,7 +1,9 @@
+import sys
+
 def main():
     while True:
         frac = input("Fraction: ")
-        
+
 
 
 def convert(fraction):
@@ -19,6 +21,7 @@ def convert(fraction):
                 pass
             else:
                 return gauge(num)
+                sys.exit()
 
 def gauge(percentage):
     if percentage <= 1:
