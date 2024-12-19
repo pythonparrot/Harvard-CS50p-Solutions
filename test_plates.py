@@ -23,3 +23,6 @@ def test_7():
 
 def test_8():
     assert is_valid("AA123") == True
+
+def test_8():
+    assert is_valid("43") == False
