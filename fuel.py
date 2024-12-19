@@ -16,12 +16,11 @@ def convert(fraction):
             pass
         else:
             if x.is_integer() and y.is_integer() and x <= y:
-                try:
+                if y != 0
                     num = (x/y)*100
-                except ZeroDivisionError:
-                    pass
-                else:
                     return gauge(num)
+                else:
+                    raise ZeroDivisionError
             else:
                 raise ValueError
 
