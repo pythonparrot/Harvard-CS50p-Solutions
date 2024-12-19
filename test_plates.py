@@ -1,3 +1,5 @@
+from plates import is_valid
+
 def test_1():
     assert is_valid("CS50") == True
 
@@ -13,4 +15,5 @@ def test_4():
 def test_5():
     assert is_valid("H") == False
 
-def test_
+def test_6():
+    assert is_valid("OUTATIME") == False
