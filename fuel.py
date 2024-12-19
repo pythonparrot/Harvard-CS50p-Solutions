@@ -2,7 +2,7 @@ def main():
     while True:
         frac = input("Fraction: ")
         convert(frac)
-        
+
 
 def convert(fraction):
     try:
@@ -23,10 +23,16 @@ def convert(fraction):
                 elif num >= 0.99:
                     print("F")
                 else:
-                    print(str(round(num * 100)) + "%")
+                    return str(round(num * 100)) + "%"
                 break
 
 def guage(percentage):
+    if percentage <= 1:
+        return "E"
+    elif percentage >= 99:
+        return "F"
+    else:
+        return f"{percentage}%"
 
 if __name__ == "__main__":
     main()
