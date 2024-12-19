@@ -2,9 +2,9 @@ import sys
 
 def main():
     frac = input("Fraction: ")
-    print(convert(frac))
-
-
+    number = convert(frac)
+    toPrint = gauge(number)
+    print(toPrint)
 
 def convert(fraction):
     while True:
@@ -15,8 +15,8 @@ def convert(fraction):
             raise ZeroDivisionError
         else:
             if x <= y:
-                num = (x/y)*100
-                return gauge(num)
+                num = round((x/y)*100)
+                return num
             else:
                 raise ValueError
 
@@ -26,7 +26,7 @@ def gauge(percentage):
     elif percentage >= 99:
         return "F"
     else:
-        return f"{round(percentage)}%"
+        return f"{percentage}%"
 
 if __name__ == "__main__":
     main()
