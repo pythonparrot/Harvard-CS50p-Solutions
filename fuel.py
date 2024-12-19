@@ -1,7 +1,7 @@
 def main():
     while True:
         frac = input("Fraction: ")
-        if convert(frac) == 
+        
 
 
 def convert(fraction):
