@@ -14,15 +14,15 @@ def main():
 
 def shorten(word):
     if has(word, "a"):
-        word = removeVowel(str, "a")
+        word = removeVowel(word, "a")
     if has(word, "e"):
-        word = removeVowel(str, "e")
+        word = removeVowel(word, "e")
     if has (word, "i"):
-        word = removeVowel(str, "i")
+        word = removeVowel(word, "i")
     if has (word, "o"):
-        word = removeVowel(str, "o")
+        word = removeVowel(word, "o")
     if has (word, "u"):
-        word = removeVowel(str, "u")
+        word = removeVowel(word, "u")
     return word
 
 if __name__ == "__main__":
