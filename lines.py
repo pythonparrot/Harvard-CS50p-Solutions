@@ -9,9 +9,9 @@ else:
         try:
             with open(sys.argv[1]) as file:
                 for line in file:
-                    if line.lstrip().startswith("#"):
-                        sys.exit("Error 2")
-                    else:
+                    if line.lstrip().startswith("#") != true and line.strip() != "":
                         count += 1
+        except FileNotFoundError:
+            sys.exit("Error 2")
     else:
         sys.exit("Error 3")
