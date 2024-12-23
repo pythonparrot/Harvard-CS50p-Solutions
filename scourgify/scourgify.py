@@ -1,4 +1,5 @@
 import sys
+import csv
 
 if len(sys.argv) != 3:
     sys.exit("Not exactly two command line arguments.")
@@ -8,4 +9,5 @@ else:
     except FileNotFoundError:
         sys.exit("File not found.")
     else:
-        
+        before_dict = csv.DictReader(file)
+        with open(sys.argv[2], mode = "w") as file:
