@@ -12,10 +12,11 @@ else:
     try:
         pic1 = Image.open(sys.argv[1])
         pic2 = Image.open(sys.argv[2])
+        shirt_pic = 
     except FileNotFoundError:
         sys.exit("File not found.")
     else:
-        width, height = pic1.size
-        resized_pic1 = ImageOps.fit(pic1, [width, height])
+        size = "shirt.png".size
+        resized_pic1 = ImageOps.fit(pic1, size))
 
 
