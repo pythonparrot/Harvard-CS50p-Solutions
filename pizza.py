@@ -9,8 +9,7 @@ elif sys.argv[1].endswith(".csv") != True:
 else:
     try:
         with open(sys.argv[1]) as file:
-            file = csv.reader(file)
+            to_tabulate = list(csv.reader(file))
             print(tabulate(file, tablefmt = "grid"))
-
     except FileNotFoundError:
         sys.exit("Specified file not found.")
