@@ -10,5 +10,6 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
 else:
     try:
         pic = PIL.Image.open(sys.argv[1])
+        pic.PIL.Image
     except FileNotFoundError:
         sys.exit("File not found.")
