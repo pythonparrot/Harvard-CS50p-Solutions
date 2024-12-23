@@ -10,6 +10,7 @@ else:
     try:
         with open(sys.argv[1]) as file:
             file = csv.reader(file)
+            print(tabulate(file, tablefmt = "grid"))
 
     except FileNotFoundError:
         sys.exit("Specified file not found.")
