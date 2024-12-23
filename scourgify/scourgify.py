@@ -6,9 +6,7 @@ if len(sys.argv) != 3:
 else:
     try:
         with open(sys.argv[1], mode = "r") as file:
+            before_reader = csv.DictReader(file)
+            
     except FileNotFoundError:
         sys.exit("File not found.")
-    else:
-        before_dict = csv.DictReader(file)
-        with open(sys.argv[2], mode = "w") as file:
-            
