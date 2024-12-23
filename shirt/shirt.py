@@ -1,5 +1,5 @@
 import sys
-import Pillow
+import Pillow as PIL
 
 if len(sys.argv) != 3:
     sys.exit("Invalid amount of command line arguments.")
@@ -9,6 +9,6 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
     sys.exit("Input extension doesn't match output extension.")
 else:
     try:
-        
+        pic = PIL.Image.open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("File not found.")
