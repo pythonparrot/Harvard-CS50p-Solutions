@@ -11,3 +11,4 @@ else:
     else:
         before_dict = csv.DictReader(file)
         with open(sys.argv[2], mode = "w") as file:
+            
