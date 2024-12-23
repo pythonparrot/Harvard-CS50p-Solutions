@@ -7,6 +7,10 @@ else:
     try:
         with open(sys.argv[1], mode = "r") as file:
             before_reader = csv.DictReader(file)
-            
+        with open(sys.argv[2], mode = "w") as file:
+            after_writer = csv.DictWriter(file, fieldnames = ["first", "last", "house"])
     except FileNotFoundError:
         sys.exit("File not found.")
+    else:
+        for row in before_reader:
+            last, first = row["name"].split(sep = ", ")
