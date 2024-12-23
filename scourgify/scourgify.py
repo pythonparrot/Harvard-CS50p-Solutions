@@ -8,9 +8,9 @@ else:
         with open(sys.argv[1], mode = "r") as bffile, open(sys.argv[2], mode = "w") as affile:
             bf_reader = csv.DictReader(bffile)
             af_writer = csv.DictWriter(affile, fieldnames = ["first", "last", "house"])
+            af_writer.writeheader()
             for row in bf_reader:
                 last, first = row["name"].split(sep = ", ")
-                for row1 in af_writer:
-                    af_writer.writerow({"first": first, "last": last, "house": row["house"]})
+                af_writer.writerow({"first": first.strip(), "last": last.strip(), "house": row["house"]})
     except FileNotFoundError:
         sys.exit("File not found.")
