@@ -10,8 +10,9 @@ if len(sys.argv) != 3:
 elif (not sys.argv[1].lower().endswith(".jpg", ".jpeg", ".png")) or (not sys.argv[2].lower().endswith(".jpg", ".jpeg", ".png")):
     sys.exit("Invalid file(s) format.")
 
-extension1 = os.path.splittext()
-if len(sys.argv[1]) - 2 != len(sys.argv[2]) != 2:
+extension1 = os.path.splittext(sys.argv[1])[1].lower()
+extension2 = os.path.splittext(sys.argv[2])[1].lower()
+if extension1 != extension2:
     sys.exit("Input extension doesn't match output extension.")
 else:
     try:
