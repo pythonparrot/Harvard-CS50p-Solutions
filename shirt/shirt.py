@@ -1,5 +1,6 @@
 import sys
-from pillow import Image
+from PIL import Image
+from PIL import ImageOps
 
 if len(sys.argv) != 3:
     sys.exit("Invalid amount of command line arguments.")
@@ -10,6 +11,6 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
 else:
     try:
         pic = Image.open(sys.argv[1])
-        #pic.PIL.Image
+        ImageOps.fit(pic, )
     except FileNotFoundError:
         sys.exit("File not found.")
