@@ -16,5 +16,6 @@ else:
         sys.exit("File not found.")
     else:
         width, height = pic1.size
-        
+        resized_pic1 = ImageOps.fit(pic1, [width, height])
+
 
