@@ -11,7 +11,7 @@ else:
             for row in bf_reader:
                 last, first = row["name"].split(sep = ", ")
                 for row1 in af_writer:
-                    af_writer.writerow({"first": first, "last": last, "house:" })
+                    af_writer.writerow({"first": first, "last": last, "house": row["house"]})
 
     except FileNotFoundError:
         sys.exit("File not found.")
