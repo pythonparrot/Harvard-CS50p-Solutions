@@ -3,9 +3,12 @@ import csv
 import tabulate
 
 if len(sys.argv) != 2:
-    sys.exit("Not right amount of command line arguments")
+    sys.exit("Not right amount of command line arguments.")
 elif sys.argv[1].endswith(".csv") != True
-    sys.exit("Invalid file name format")
+    sys.exit("Invalid file name format.")
 else:
     try:
-
+        with open(sys.argv[1]) as file:
+            
+    except FileNotFoundError:
+        sys.exit("Specified file not found.")
