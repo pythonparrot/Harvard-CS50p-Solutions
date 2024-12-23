@@ -17,6 +17,7 @@ else:
     else:
         size = shirt_pic.size
         resized_input_pic = ImageOps.fit(input_pic, size)
-        output_pic = input_pic.paste(shirt_pic)
+        resized_input_pic.paste(shirt_pic)
+        
 
 
