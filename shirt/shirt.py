@@ -10,9 +10,11 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
     sys.exit("Input extension doesn't match output extension.")
 else:
     try:
-        pic = Image.open(sys.argv[1])
+        pic1 = Image.open(sys.argv[1])
+        pic2 = Image.open(sys.argv[2])
     except FileNotFoundError:
         sys.exit("File not found.")
     else:
-        width, height = pic.size
+        width, height = pic1.size
         
+
