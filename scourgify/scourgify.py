@@ -7,7 +7,7 @@ else:
     try:
         with open(sys.argv[1], mode = "r") as bffile, open(sys.argv[2], mode = "w") as affile:
             bf_reader = csv.DictReader(bffile)
-            af_writer = csv.DictWriter(affile, fieldnames = ["first", "last", "house"])
+            af_writer = csv.writer(affile, fieldnames = ["first", "last", "house"])
             for row in bf_reader:
                 last, first = row["name"].split(sep = ", ")
                 for row1 in af_writer:
