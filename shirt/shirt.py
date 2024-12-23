@@ -11,6 +11,8 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
 else:
     try:
         pic = Image.open(sys.argv[1])
-        ImageOps.fit(pic, )
     except FileNotFoundError:
         sys.exit("File not found.")
+    else:
+        width, height = pic.size
+        
