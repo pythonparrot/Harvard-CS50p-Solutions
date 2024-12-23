@@ -11,7 +11,6 @@ elif sys.argv[1][-2:] != sys.argv[2][-2:]:
 else:
     try:
         input_pic = Image.open(sys.argv[1])
-        output_pic = Image.open(sys.argv[2])
         shirt_pic = Image.open("shirt.png")
     except FileNotFoundError:
         sys.exit("File not found.")
