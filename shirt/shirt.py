@@ -7,11 +7,11 @@ import os
 
 if len(sys.argv) != 3:
     sys.exit("Invalid amount of command line arguments.")
-elif (not sys.argv[1].lower().endswith(".jpg", ".jpeg", ".png")) or (not sys.argv[2].lower().endswith(".jpg", ".jpeg", ".png")):
+elif (not sys.argv[1].lower().endswith((".jpg", ".jpeg", ".png"))) or (not sys.argv[2].lower().endswith((".jpg", ".jpeg", ".png"))):
     sys.exit("Invalid file(s) format.")
 
-extension1 = os.path.splittext(sys.argv[1])[1].lower()
-extension2 = os.path.splittext(sys.argv[2])[1].lower()
+extension1 = os.path.splitext(sys.argv[1])[1].lower()
+extension2 = os.path.splitext(sys.argv[2])[1].lower()
 if extension1 != extension2:
     sys.exit("Input extension doesn't match output extension.")
 else:
