@@ -13,6 +13,6 @@ import re
 #     main()
 
 input = input("HTML: ")
-url = re.fullmatch(r'src="(https?://(?:www\.)?(youtube\.com/embed/\w+)"', input)
+url = re.fullmatch(r'src="https?://(?:www\.)?(youtube\.com/embed/\w+)"', input)
 print(url.group(1))
 
