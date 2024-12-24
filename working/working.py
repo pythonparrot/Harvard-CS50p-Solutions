@@ -7,7 +7,11 @@ def main():
 
 
 def convert(s):
-    times = re.search(r"[0-9]{1,2}()", s)
+    if times := re.search(r"[0-9]{1,2}()", s)
+
+    else:
+        raise ValueError
+
 
 if __name__ == "__main__":
     main()
