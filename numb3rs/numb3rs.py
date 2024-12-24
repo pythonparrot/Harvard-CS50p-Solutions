@@ -10,9 +10,9 @@ def validate(ip):
         for i in range(4):
             num = int(matches.group(i + 1))
             if num < 0 or num > 255:
-                return False
+                sys.exit("False")
     else:
-        return False
+        sys.exit("False")
 
     return True
 
