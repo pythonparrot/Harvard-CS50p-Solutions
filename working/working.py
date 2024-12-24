@@ -7,8 +7,9 @@ import re
 
 
 # def convert(s):
-#     if times := re.search(r"^[0-9]{1,2}(?::00)? (?:A|P)M to [0-9]{1,2}(?::00)? (?:A|P)M", s)
-
+#     if times := re.search(r"(^[0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M) to ([0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M)", s):
+#         print(times.group(1))
+#         print(times.group(2))
 #     else:
 #         raise ValueError
 
@@ -17,7 +18,8 @@ import re
 #     main()
 
 s = input("Hours: ")
-if re.search(r"^[0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M to [0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M", s):
-    print("True")
+if times := re.search(r"^[0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M to [0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M", s):
+    print(times.group(1))
+    print(times.group(2))
 else:
     print("False")
