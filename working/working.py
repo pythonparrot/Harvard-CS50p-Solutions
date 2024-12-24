@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    if times := re.search(r"[0-9]{1,2}()", s)
+    if times := re.search(r"[0-9]{1,2}(?::00)", s)
 
     else:
         raise ValueError
