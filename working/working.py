@@ -17,7 +17,7 @@ import re
 #     main()
 
 s = input("Hours: ")
-if re.search(r"^[0-9]{1,2}(?::00)? (?:A|P)M to [0-9]{1,2}(?::00)? (?:A|P)M", s):
+if re.search(r"^[0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M to [0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M", s):
     print("True")
 else:
     print("False")
