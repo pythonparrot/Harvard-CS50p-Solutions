@@ -25,7 +25,9 @@ def convert(s):
             time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}
 
         if time1_string2.endwith("AM"):
-            time
+            time1_string3 = time1_string2.removesuffix(" AM")
+        else:
+            time1_string3 = f"{str(int(groups1.group(1)) + 12)}:"
 
 
     else:
