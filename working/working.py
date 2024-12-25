@@ -18,7 +18,7 @@ import re
 #     main()
 
 s = input("Hours: ")
-if times := re.search(r"(^[0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M) to ([0-9]{1,2}(?::[0-9]{1,2})? (?:A|P)M)", s):
+if times := re.search(r"(^(?:[1-9]|[1][0-2])(?::[0-9]{1,2})? (?:A|P)M) to ((?:[1-9]|[1][0-2])(?::[0-9]{1,2})? (?:A|P)M)", s):
     print(times.group(1))
     print(times.group(2))
 else:
