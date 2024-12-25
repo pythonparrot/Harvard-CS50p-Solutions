@@ -37,14 +37,38 @@ def convert(s):
             groups2 = re.search(r"([1-9]) ((?:A|P)M)", time2_string1)
             #Adds a :00 to the end of the number and assigns it to time2_string2.
             time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}
-        #If time1_string2 is an AM time...
-        if time1_string2.endwith("AM"):
-            #Add 12 hours to the time, remove the " AM", and set it equal to time1_string3.
-            time1_string3 = time1_string2.removesuffix(" AM")
-            
+        #If time1_string2 is an PM time...
+        if time1_string2.endswith("PM"):
+            #... remove the " PM"
+            time1_string2 = time1_string2.removesuffix(" PM")
+            #Split up time1_string2 based on the colon
+            x1, y1 = time1_string2.split(":")
+            #Add 12 hours to the time
+            x1 = str(int(x1) + 12)
+            #Put the two numbers back together into a complete time
+            time1_string2 = f"{x1}:{y1}"
+        #Otherwise, if time1_string2 is an AM time...
         else:
-            time1_string3 = f"{str(int(groups1.group(1)) + 12)}:"
+            #... remove the " AM"
+            time1_string2 = time1_string2.removesuffix(" AM")
 
+        #If time2_string2 is a PM time...
+        if time2_string2.endswith("PM"):
+            #... remove the " PM"
+            time2_string2 = time2_string2.removesuffix(" PM")
+            #Split up time2_string2 based on the colon
+            x2, y2 = time2_string2.split(":")
+            #Add 12 hours to the time
+            x2 = str(int(x2) + 12)
+            #Put the two numbers back together into a complete time
+            time2_string2 = f"{x2}:{y2}"
+        #Otherwise, if time2_string2 is an AM time...
+        else:
+            #... remove the " AM"
+            time2_string2 = time2_string2.removesuffix(" AM")
+
+        #Finally, put the two final times together.
+        return f"{time1_string2} to {time2_string2}"
 
     else:
         raise ValueError
