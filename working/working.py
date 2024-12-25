@@ -15,13 +15,16 @@ def convert(s):
             time1_string2 = time1_string1
         else:
             groups1 = re.search(r"([1-9]) ((?:A|P)M)", time1_string1)
-            time1_string2 = groups1.
+            time1_string2 = f"{groups1.group(1)}:00 {groups1.group(2)}
 
         if ":" in time2_string1:
             groups2 = re.search(r"^([1-9]|[1][0-2]):([0-5][0-9]) ((?:A|P)M)", time2_string1)
+            time2_string2 = time2_string1
         else:
             groups2 = re.search(r"([1-9]) ((?:A|P)M)", time2_string1)
+            time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}
 
+        
 
     else:
         raise ValueError
