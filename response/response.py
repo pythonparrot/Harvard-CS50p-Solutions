@@ -1,4 +1,8 @@
 import validators
 
 email1 = input("What's your email address?: ")
-print(validators.email("yooooo"))
+try:
+    if validators.email(email1):
+        print("Valid")
+except ValidationError:
+    print("Invalid")
