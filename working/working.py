@@ -24,7 +24,9 @@ def convert(s):
             groups2 = re.search(r"([1-9]) ((?:A|P)M)", time2_string1)
             time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}
 
-        
+        if time1_string2.endwith("AM"):
+            time
+
 
     else:
         raise ValueError
