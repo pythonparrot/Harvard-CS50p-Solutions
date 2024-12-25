@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    um_list = re.findall(r"\bum\b", s)
+    um_list = re.findall(r"\bum\b", s.lower())
     return len(um_list)
 
 if __name__ == "__main__":
