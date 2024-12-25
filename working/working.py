@@ -67,6 +67,11 @@ def convert(s):
             #... remove the " AM"
             time2_string2 = time2_string2.removesuffix(" AM")
 
+        if int(x1) < 10:
+            time1_string2 = f"0{time1_string2}"
+        if int(x2) < 10:
+            time1_string2 = f"0{time2_string2}"
+            
         #Finally, put the two final times together.
         return f"{time1_string2} to {time2_string2}"
 
