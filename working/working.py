@@ -24,7 +24,7 @@ def convert(s):
             #... assigns 2 "groups" into groups1, being the number and the AM/PM.
             groups1 = re.search(r"([1-9]) ((?:A|P)M)", time1_string1)
             #Adds a :00 to the end of the number and assigns it to time1_string2.
-            time1_string2 = f"{groups1.group(1)}:00 {groups1.group(2)}
+            time1_string2 = f"{groups1.group(1)}:00 {groups1.group(2)}"
         #If there is a colon in the second time...
         if ":" in time2_string1:
             #... assigns 3 "groups" into groups2, being the number before the colon, the number after the colon, and the AM/PM.
@@ -36,7 +36,7 @@ def convert(s):
             #... assigns 2 "groups" into groups2, being the number and the AM/PM.
             groups2 = re.search(r"([1-9]) ((?:A|P)M)", time2_string1)
             #Adds a :00 to the end of the number and assigns it to time2_string2.
-            time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}
+            time2_string2 = f"{groups2.group(1)}:00 {groups2.group(2)}"
         #If time1_string2 is an PM time...
         if time1_string2.endswith("PM"):
             #... remove the " PM"
