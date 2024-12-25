@@ -11,7 +11,16 @@ def convert(s):
         time1_string1 = times.group(1)
         time2_string1 = times.group(2)
         if ":" in time1_string1:
-            groups1 = re.search("^([1-9]|[1][0-2])", time1_string1)
+            groups1 = re.search(r"^([1-9]|[1][0-2]):([0-5][0-9]) ((?:A|P)M)", time1_string1)
+            time1_string2 = 
+        else:
+            groups1 = re.search(r"([1-9]) ((?:A|P)M)", time1_string1)
+
+        if ":" in time2_string1:
+            groups2 = re.search(r"^([1-9]|[1][0-2]):([0-5][0-9]) ((?:A|P)M)", time2_string1)
+        else:
+            groups2 = re.search(r"([1-9]) ((?:A|P)M)", time2_string1)
+
 
     else:
         raise ValueError
