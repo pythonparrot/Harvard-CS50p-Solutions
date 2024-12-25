@@ -47,12 +47,11 @@ def convert(s):
             x1 = str(int(x1) + 12)
             #Put the two numbers back together into a complete time
             time1_string2 = f"{x1}:{y1}"
-            if int(x1) < 10:
-                time1_string2 = f"0{time1_string2}"
         #Otherwise, if time1_string2 is an AM time...
         else:
             #... remove the " AM"
             time1_string2 = time1_string2.removesuffix(" AM")
+            x1, y1 = time1_string2.split(":")
 
         #If time2_string2 is a PM time...
         if time2_string2.endswith("PM"):
@@ -63,13 +62,17 @@ def convert(s):
             #Add 12 hours to the time
             x2 = str(int(x2) + 12)
             #Put the two numbers back together into a complete time
-            if int(x2) < 10:
-                time1_string2 = f"0{time2_string2}"
             time2_string2 = f"{x2}:{y2}"
         #Otherwise, if time2_string2 is an AM time...
         else:
             #... remove the " AM"
             time2_string2 = time2_string2.removesuffix(" AM")
+            x2, y2 = time2_string2.split(":")
+
+        if int(x1) < 10:
+            time1_string2 = f"0{time1_string2}"
+        if int(x2) < 10:
+            time1_string2 = f"0{time2_string2}"
 
         #Finally, put the two final times together.
         return f"{time1_string2} to {time2_string2}"
