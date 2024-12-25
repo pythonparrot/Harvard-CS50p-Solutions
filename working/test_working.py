@@ -24,3 +24,7 @@ def test_convert6():
 def test_convert7():
     with pytest.raises(ValueError):
         convert("09:00 AM - 17:00 PM")
+
+def test_convert8():
+    with pytest.raises(ValueError):
+        convert("30:00 AM to 17:00 PM")
