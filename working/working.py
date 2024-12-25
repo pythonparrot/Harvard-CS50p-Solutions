@@ -12,6 +12,7 @@ def convert(s):
         time2_string1 = times.group(2)
         if time1_string1.endswith("AM"):
             
+
     else:
         raise ValueError
 
