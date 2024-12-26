@@ -5,8 +5,7 @@ class Hat:
 
     @classmethod
     def sort(cls, name):
-        print(f"{name} is in {random.choice(self.houses)}")
+        print(f"{name} is in {random.choice(cls.houses)}")
 
 
-hat = Hat()
-hat.sort("Harry")
+Hat.sort("Harry")
