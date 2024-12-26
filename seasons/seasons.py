@@ -7,7 +7,7 @@ def main():
     date1 = input("Date of birth: ")
     if groups := re.search(r"^([0-9][0-9][0-9][0-9])-([0][1-9]|[1][0-2])-([0-2][0-9]|[3][0-1])$", date1):
         try:
-            date2 = date(groups[1], groups[2], groups[3])
+            date2 = date(int(groups[1]), int(groups[2]), int(groups[3]))
         except ValueError:
             sys.exit("Invalid date")
         else:
