@@ -2,6 +2,7 @@ from datetime import date
 import re
 import inflect
 
+p = inflect.engine()
 
 def main():
     date1 = input("Date of birth: ")
@@ -12,7 +13,9 @@ def main():
             sys.exit("Invalid date")
         else:
             difference = date.today() - date2
-            print(difference.year)
+            days = difference.days
+            minutes = days * 24 * 60
+            print(f"{p.number_to_words(minutes)} minutes")
     else:
         sys.exit("Invalid date")
 
