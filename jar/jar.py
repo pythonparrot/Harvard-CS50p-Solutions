@@ -31,3 +31,10 @@ class Jar:
     @property
     def size(self):
         return self.size
+
+def main():
+    jar = Jar(3)
+    print(jar)
+
+if __name__ == "__main__":
+    main()
