@@ -1,23 +1,5 @@
-class Jar:
-    def __init__(self, capacity=12):
-        if capacity >= 0:
-            self.capacity = capacity
-        else:
-            raise ValueError
+import jar
 
-    def __str__(self):
-        ...
+def test_jar1():
+    
 
-    def deposit(self, n):
-        ...
-
-    def withdraw(self, n):
-        ...
-
-    @property
-    def capacity(self):
-        ...
-
-    @property
-    def size(self):
-        ...
