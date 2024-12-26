@@ -2,11 +2,12 @@ class Student:
     ...
 
 def main():
-    student = get_student()
+    student = Student("Harry", "Gryffindor")
     print(f"{student.name} from {student.house}")
 
 def Student(name, house):
-    this.name = name
+    self.name = name
+    self.house = house
 
 if __name__ == "__main__":
     main()
