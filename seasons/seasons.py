@@ -11,7 +11,8 @@ def main():
         except ValueError:
             sys.exit("Invalid date")
         else:
-            print(f"{date2.year})
+            difference = date.today() - date2
+            
     else:
         sys.exit("Invalid date")
 
