@@ -12,7 +12,7 @@ def main():
             sys.exit("Invalid date")
         else:
             difference = date.today() - date2
-            minutes = difference . 
+            print(difference.year)
     else:
         sys.exit("Invalid date")
 
