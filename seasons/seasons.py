@@ -1,6 +1,7 @@
 from datetime import date
 import re
 import inflect
+import sys
 
 p = inflect.engine()
 
@@ -14,7 +15,7 @@ def convert(d):
             difference = date.today() - date2
             days = difference.days
             minutes = days * 24 * 60
-            return f"{p.number_to_words(minutes)} minutes".capitalize()
+            return f"{p.number_to_words(minutes, andword="")} minutes".capitalize()
     else:
         sys.exit("Invalid date")
 
