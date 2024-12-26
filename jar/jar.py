@@ -9,7 +9,7 @@ class Jar:
     def __str__(self):
         to_return = ""
         for i in range(self.size):
-            to_return = to_return + "🍪"
+            to_return += "🍪"
         return to_return
 
     def deposit(self, n):
