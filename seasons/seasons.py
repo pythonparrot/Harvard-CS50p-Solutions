@@ -14,7 +14,7 @@ def convert(d):
             difference = date.today() - date2
             days = difference.days
             minutes = days * 24 * 60
-            return f"{p.number_to_words(minutes)} minutes"
+            return f"{p.number_to_words(minutes)} minutes".capitalize()
     else:
         sys.exit("Invalid date")
 
