@@ -10,8 +10,10 @@ class PDF(FPDF):
         self.cell(30, 10, "CS50 Shirtificate", align="C")
 
 
-#name = input("Name: ")
+name = input("Name: ")
 pdf = PDF()
 pdf.add_page()
 pdf.image("shirtificate.png", w=185, x=10, y=70)
+pdf.set_font("helvetica", size = 20)
+pdf.cell(30, 30, f"{name} took CS50", align = "C")
 pdf.output("shirtificate.pdf")
