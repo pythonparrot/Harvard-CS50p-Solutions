@@ -11,7 +11,7 @@ def main():
         except ValueError:
             sys.exit("Invalid date")
         else:
-            
+            print(f"{date2.year})
     else:
         sys.exit("Invalid date")
 
