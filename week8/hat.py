@@ -8,4 +8,4 @@ class Hat:
         print(f"{name} is in {random.choice(cls.houses)}")
 
 
-Hat.sort("Harry")s
+Hat.sort("Harry")
